@@ -1,0 +1,14 @@
+@import "./base.scss";
+@import "./header_scss/header.scss";
+
+@font-face {
+  font-family: "Netflix Sans";
+  src: url("/home/kateryna/Prototype/prototype/src/assets/fonts/netflix-sans-cufonfonts-webfont/NetflixSansRegular.woff");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Netflix Sans Medium";
+  src: url("/home/kateryna/Prototype/prototype/src/assets/fonts/netflix-sans-cufonfonts-webfont/NetflixSansMedium.woff");
+  font-weight: 800;
+}

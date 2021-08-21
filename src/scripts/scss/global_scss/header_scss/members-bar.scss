@@ -1,0 +1,25 @@
+.members-bar_wrapper {
+  max-width: 50%;
+  height: 90%;
+  transform: translateX(100%);
+  padding-right: 60px;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  .members-bar_login-button {
+    width: 100px;
+    height: 35px;
+    background-color: red;
+    border: none;
+    border-radius: 3px;
+    color: white;
+    font-family: "Netflix Sans";
+    font-size: 17px;
+    padding-bottom: 4px;
+    &:hover {
+      box-shadow: 1px 1px 5px rgba(255, 255, 255, 0.26),
+        -1px -1px 5px rgba(255, 255, 255, 0.233);
+      cursor: pointer;
+    }
+  }
+}

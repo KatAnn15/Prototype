@@ -1,0 +1,59 @@
+.above-the-fold-wrapper {
+  width: 100%;
+  height: 780px;
+  position: relative;
+  overflow: hidden;
+}
+.above-the-fold-wrapper .above-the-fold_cover-image {
+  width: 100%;
+  transform: rotate(10deg) translateY(-15%) scale(1.1);
+}
+.above-the-fold-wrapper .above-the-fold_info-wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  box-shadow: rgba(0, 0, 0, 0.698) 0 30vh 100px inset, rgba(0, 0, 0, 0.575) 0 70vh 100px inset, rgba(0, 0, 0, 0.698) 0 -30vh 100px inset;
+}
+.above-the-fold-wrapper .above-the-fold_info-wrapper .above-the-fold_info-container {
+  height: 55%;
+  transform: translateY(60%);
+  color: white;
+  font-family: "Netflix Sans";
+  font-weight: 400;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.above-the-fold-wrapper .above-the-fold_info-wrapper .above-the-fold_info-container .above-the-fold_title {
+  font-family: "Netflix Sans Medium";
+  font-size: 4rem;
+  margin: 0 auto;
+}
+.above-the-fold-wrapper .above-the-fold_info-wrapper .above-the-fold_info-container .above-the-fold_subtitle {
+  font-size: 1.625rem;
+  margin: 10px auto;
+}
+.above-the-fold-wrapper .above-the-fold_info-wrapper .above-the-fold_info-container .above-the-fold_action-note {
+  font-size: 1.2rem;
+  line-height: 50px;
+}
+
+.list-gallery_wrapper {
+  display: grid;
+  color: white;
+  font-family: "Netflix Sans";
+  font-size: 20px;
+  grid-gap: 10px;
+}
+.list-gallery_wrapper .list-gallery-item_wrapper {
+  width: 100%;
+  height: 550px;
+  background-color: black;
+  display: flex;
+}
+.list-gallery_wrapper .list-gallery-item_wrapper .list-gallery-item_info-container {
+  max-width: 550px;
+  margin: 40px 100px;
+}
+
+/*# sourceMappingURL=main.css.map */

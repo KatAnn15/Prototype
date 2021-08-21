@@ -1,26 +1,17 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Header from "./scripts/tsx/global_tsx/header_tsx/header";
+import AboveTheFold from './scripts/tsx/global_tsx/above_the_fold';
+import ListGallery from './scripts/tsx/main_tsx/list_gallery/list-gallery';
 
-function App() {
+const App: React.FC  = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header/>
+      <AboveTheFold/>
+      <ListGallery/>
     </div>
   );
 }
 
 export default App;
+ 

@@ -16,8 +16,8 @@ const ListGallery: React.FC = () => {
         files.onSnapshot(snaps => {
             snaps.forEach(snap => {
                 const snapData = snap.data();
-                const {title, subtitle, mediaURL, mediaAlt} = snapData;
-                allFiles.push(<ListGalleryItem title={title} subtitle={subtitle} mediaURL={mediaURL} mediaAlt={mediaAlt}/>)
+                const {title, subtitle, mediaURL, mediaAlt, additionalBox, videoCover, downloadGif, imageURL, name} = snapData;
+                allFiles.push(<ListGalleryItem title={title} subtitle={subtitle} mediaURL={mediaURL} mediaAlt={mediaAlt} additionalBox={additionalBox} videoCover={videoCover} downloadGif={downloadGif} imageURL={imageURL} name={name}/>)
             })
             setFiles(allFiles)
         })

@@ -19,7 +19,6 @@
   height: 55%;
   transform: translateY(60%);
   color: white;
-  font-family: "Netflix Sans";
   font-weight: 400;
   max-width: 800px;
   margin: 0 auto;
@@ -41,19 +40,225 @@
 .list-gallery_wrapper {
   display: grid;
   color: white;
-  font-family: "Netflix Sans";
   font-size: 20px;
   grid-gap: 10px;
+  margin-top: 10px;
 }
 .list-gallery_wrapper .list-gallery-item_wrapper {
-  width: 100%;
   height: 550px;
   background-color: black;
-  display: flex;
 }
-.list-gallery_wrapper .list-gallery-item_wrapper .list-gallery-item_info-container {
+.list-gallery_wrapper .list-gallery-item_wrapper:nth-child(even) .list-gallery-item_content-wrapper {
+  flex-direction: row-reverse;
+}
+.list-gallery_wrapper .list-gallery-item_wrapper:nth-child(3) .list-gallery-item_media-container, .list-gallery_wrapper .list-gallery-item_wrapper:nth-child(4) .list-gallery-item_media-container {
+  margin-top: 40px;
+}
+.list-gallery_wrapper .list-gallery-item_wrapper .list-gallery-item_content-wrapper {
+  max-width: 1300px;
+  display: flex;
+  margin: 0 auto;
+  align-items: center;
+}
+.list-gallery_wrapper .list-gallery-item_wrapper .list-gallery-item_content-wrapper .list-gallery-item_info-container {
   max-width: 550px;
   margin: 40px 100px;
+  text-align: left;
+}
+.list-gallery_wrapper .list-gallery-item_wrapper .list-gallery-item_content-wrapper .list-gallery-item_info-container .list-gallery-item_title {
+  font-size: 3.125rem;
+  font-family: "Netflix Sans Medium";
+}
+.list-gallery_wrapper .list-gallery-item_wrapper .list-gallery-item_content-wrapper .list-gallery-item_media-container {
+  position: relative;
+  padding-top: 20px;
+}
+.list-gallery_wrapper .list-gallery-item_wrapper .list-gallery-item_content-wrapper .list-gallery-item_media-container .list-gallery-item_image {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  overflow: hidden;
+}
+.list-gallery_wrapper .list-gallery-item_wrapper .list-gallery-item_content-wrapper .list-gallery-item_media-container .video-cover_wrapper {
+  position: absolute;
+  top: 0;
+  z-index: 1;
+}
+.list-gallery_wrapper .list-gallery-item_wrapper .list-gallery-item_content-wrapper .list-gallery-item_media-container .video-cover_wrapper .video-cover_item {
+  width: 100%;
+  height: 100%;
+  transform: translateY(65px);
+}
+.list-gallery_wrapper .list-gallery-item_wrapper .list-gallery-item_content-wrapper .list-gallery-item_media-container .additional-box_wrapper {
+  position: absolute;
+  bottom: 0;
+  left: 20%;
+  z-index: 3;
+  width: 330px;
+  height: 110px;
+  display: flex;
+  border: 2px solid #666565;
+  border-radius: 10px;
+  background-color: black;
+  font-size: 16px;
+  padding: 10px;
+  align-items: center;
+}
+.list-gallery_wrapper .list-gallery-item_wrapper .list-gallery-item_content-wrapper .list-gallery-item_media-container .additional-box_wrapper .additional-box_image {
+  height: 80px;
+}
+.list-gallery_wrapper .list-gallery-item_wrapper .list-gallery-item_content-wrapper .list-gallery-item_media-container .additional-box_wrapper .additional-box_gif {
+  height: 60px;
+  padding-left: 20px;
+}
+.list-gallery_wrapper .list-gallery-item_wrapper .list-gallery-item_content-wrapper .list-gallery-item_media-container .additional-box_wrapper .additional-box_info-container {
+  margin: 0 20px;
+  text-align: left;
+}
+.list-gallery_wrapper .list-gallery-item_wrapper .list-gallery-item_content-wrapper .list-gallery-item_media-container .additional-box_wrapper .additional-box_info-container .additional-box_info-container_name {
+  margin: 0;
+}
+.list-gallery_wrapper .list-gallery-item_wrapper .list-gallery-item_content-wrapper .list-gallery-item_media-container .additional-box_wrapper .additional-box_info-container .additional-box_info-container_downloading {
+  color: blue;
+  margin: 0;
+}
+
+.faq-list_wrapper {
+  background-color: black;
+  color: white;
+  margin: 10px 0;
+  padding: 30px;
+}
+.faq-list_wrapper .faq-list_content-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+.faq-list_wrapper .faq_title {
+  font-size: 3.125rem;
+  font-family: "Netflix Sans Medium";
+  margin: 0;
+  line-height: 100px;
+}
+.faq-list_wrapper .faq-items_wrapper {
+  display: grid;
+  grid-gap: 8px;
+  padding-top: 30px;
+}
+.faq-list_wrapper .faq-items_wrapper .faq-item_wrapper {
+  background-color: #242724;
+  text-align: left;
+  font-size: 22px;
+}
+.faq-list_wrapper .faq-items_wrapper .faq-item_wrapper .faq_question_wrapper {
+  display: flex;
+  border-bottom: 1px solid black;
+  cursor: pointer;
+  justify-content: space-between;
+  padding: 0 30px;
+  height: 85px;
+}
+.faq-list_wrapper .faq-items_wrapper .faq-item_wrapper .faq_question_wrapper .faq_toggle-btn {
+  background-color: transparent;
+  border: none;
+  color: gray;
+  font-size: 35px;
+}
+.faq-list_wrapper .faq-items_wrapper .faq-item_wrapper .faq_answer-wrapper {
+  justify-content: space-between;
+  padding: 0 30px;
+}
+
+.movies-page_wrapper .movies-page_title {
+  font-size: 45px;
+  font-family: "Netflix Sans Medium";
+}
+.movies-page_wrapper .movies-list_wrapper {
+  margin: 0 auto;
+  max-width: 95%;
+}
+.movies-page_wrapper .movies-list_wrapper .movies-page_subtitle {
+  font-size: 35px;
+}
+.movies-page_wrapper .movies-list_wrapper .movies-page_movies-list {
+  position: relative;
+  overflow: hidden;
+}
+.movies-page_wrapper .movies-list_wrapper .movies-page_movies-list .movies-list_navigation {
+  position: absolute;
+  height: 100%;
+  z-index: 2;
+  width: 140px;
+  display: flex;
+  align-items: center;
+  top: 0;
+}
+.movies-page_wrapper .movies-list_wrapper .movies-page_movies-list .movies-list_navigation__left {
+  background: linear-gradient(to right, black, transparent);
+}
+.movies-page_wrapper .movies-list_wrapper .movies-page_movies-list .movies-list_navigation__right {
+  background: linear-gradient(to left, black, transparent);
+}
+.movies-page_wrapper .movies-list_wrapper .movies-page_movies-list .movies-list_navigation .movies-list_nav-btn {
+  width: 100%;
+  height: 70px;
+  background-color: transparent;
+  cursor: pointer;
+}
+.movies-page_wrapper .movies-list_wrapper .movies-page_movies-list .movies-list_navigation .movies-list_nav-btn span {
+  content: "";
+}
+.movies-page_wrapper .movies-list_wrapper .movies-page_movies-list .movies-list_navigation .movies-list_nav-btn span::before {
+  content: "";
+  height: 3px;
+  width: 30px;
+  background-color: rgba(255, 255, 255, 0.541);
+  position: absolute;
+}
+.movies-page_wrapper .movies-list_wrapper .movies-page_movies-list .movies-list_navigation .movies-list_nav-btn span::after {
+  content: "";
+  height: 3px;
+  width: 30px;
+  background-color: rgba(255, 255, 255, 0.541);
+  position: absolute;
+}
+.movies-page_wrapper .movies-list_wrapper .movies-page_movies-list .movies-list_navigation__left {
+  left: 0;
+}
+.movies-page_wrapper .movies-list_wrapper .movies-page_movies-list .movies-list_navigation__left span::before {
+  transform: rotate(45deg) translateY(450%);
+}
+.movies-page_wrapper .movies-list_wrapper .movies-page_movies-list .movies-list_navigation__left span::after {
+  transform: rotate(-45deg) translateY(-450%);
+}
+.movies-page_wrapper .movies-list_wrapper .movies-page_movies-list .movies-list_navigation__right {
+  right: 0;
+}
+.movies-page_wrapper .movies-list_wrapper .movies-page_movies-list .movies-list_navigation__right span::before {
+  transform: rotate(135deg) translateY(-450%);
+}
+.movies-page_wrapper .movies-list_wrapper .movies-page_movies-list .movies-list_navigation__right span::after {
+  transform: rotate(-135deg) translateY(450%);
+}
+.movies-page_wrapper .movies-list_wrapper .movies-page_movies-list .movies-list_movies-container {
+  display: flex;
+  grid-gap: 10px;
+  flex-wrap: nowrap;
+}
+.movies-page_wrapper .movies-list_wrapper .movies-page_movies-list .movies-list_movies-container .movie-item_wrapper {
+  cursor: pointer;
+}
+.movies-page_wrapper .movies-list_wrapper .movies-page_movies-list .movies-list_movies-container .movie-item_wrapper .movie-item_poster-container {
+  width: 370px;
+  height: 250px;
+  background-size: cover;
+  background-position: 0 18%;
+}
+.movies-page_wrapper .movies-list_wrapper .movies-page_movies-list .movies-list_movies-container .movie-item_wrapper .movie-item_poster-container:hover {
+  box-shadow: 2px 2px 10px rgba(255, 255, 255, 0.377);
+}
+.movies-page_wrapper .movies-list_wrapper .movies-page_movies-list .movies-list_movies-container .movie-item_wrapper .movie-item_poster-container:hover + .movie-item_title {
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.575);
+  color: #ff5100;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import firebase from "./firebase_setup";
+import firebase from "../../global_tsx/firebase_setup";
 
 import { useState, useEffect, useCallback } from 'react';
 

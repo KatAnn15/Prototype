@@ -1,0 +1,86 @@
+.list-gallery_wrapper {
+  display: grid;
+  color: white;
+  font-size: 20px;
+  grid-gap: 10px;
+  margin-top: 10px;
+  .list-gallery-item_wrapper {
+    height: 550px;
+    background-color: rgb(0, 0, 0);
+    &:nth-child(even) .list-gallery-item_content-wrapper {
+      flex-direction: row-reverse;
+    }
+    &:nth-child(3) .list-gallery-item_media-container,
+    &:nth-child(4) .list-gallery-item_media-container {
+      margin-top: 40px;
+    }
+    .list-gallery-item_content-wrapper {
+      max-width: 1300px;
+      display: flex;
+      margin: 0 auto;
+      align-items: center;
+      .list-gallery-item_info-container {
+        max-width: 550px;
+        margin: 40px 100px;
+        text-align: left;
+        .list-gallery-item_title {
+          font-size: 3.125rem;
+          font-family: "Netflix Sans Medium";
+        }
+      }
+      .list-gallery-item_media-container {
+        position: relative;
+        padding-top: 20px;
+        .list-gallery-item_image {
+          position: relative;
+          z-index: 2;
+          width: 100%;
+          overflow: hidden;
+        }
+        .video-cover_wrapper {
+          position: absolute;
+          top: 0;
+          z-index: 1;
+          .video-cover_item {
+            width: 100%;
+            height: 100%;
+            transform: translateY(65px);
+          }
+        }
+        .additional-box_wrapper {
+          position: absolute;
+          bottom: 0;
+          left: 20%;
+          z-index: 3;
+          width: 330px;
+          height: 110px;
+          display: flex;
+          border: 2px solid rgb(102, 101, 101);
+          border-radius: 10px;
+          background-color: black;
+          font-size: 16px;
+          padding: 10px;
+          align-items: center;
+          .additional-box_image {
+            height: 80px;
+          }
+          .additional-box_gif {
+            height: 60px;
+            padding-left: 20px;
+          }
+          .additional-box_info-container {
+            margin: 0 20px;
+            text-align: left;
+            .additional-box_info-container_name {
+              margin: 0;
+            }
+            .additional-box_info-container_downloading {
+              color: blue;
+              margin: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}

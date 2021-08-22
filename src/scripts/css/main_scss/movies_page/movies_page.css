@@ -1,0 +1,94 @@
+.movies-page_wrapper .movies-page_title {
+  font-size: 45px;
+  font-family: "Netflix Sans Medium";
+}
+.movies-page_wrapper .movies-list_wrapper {
+  margin: 0 auto;
+  max-width: 95%;
+}
+.movies-page_wrapper .movies-list_wrapper .movies-page_subtitle {
+  font-size: 35px;
+}
+.movies-page_wrapper .movies-list_wrapper .movies-page_movies-list {
+  position: relative;
+  overflow: hidden;
+}
+.movies-page_wrapper .movies-list_wrapper .movies-page_movies-list .movies-list_navigation {
+  position: absolute;
+  height: 100%;
+  z-index: 2;
+  width: 140px;
+  display: flex;
+  align-items: center;
+  top: 0;
+}
+.movies-page_wrapper .movies-list_wrapper .movies-page_movies-list .movies-list_navigation__left {
+  background: linear-gradient(to right, black, transparent);
+}
+.movies-page_wrapper .movies-list_wrapper .movies-page_movies-list .movies-list_navigation__right {
+  background: linear-gradient(to left, black, transparent);
+}
+.movies-page_wrapper .movies-list_wrapper .movies-page_movies-list .movies-list_navigation .movies-list_nav-btn {
+  width: 100%;
+  height: 70px;
+  background-color: transparent;
+  cursor: pointer;
+}
+.movies-page_wrapper .movies-list_wrapper .movies-page_movies-list .movies-list_navigation .movies-list_nav-btn span {
+  content: "";
+}
+.movies-page_wrapper .movies-list_wrapper .movies-page_movies-list .movies-list_navigation .movies-list_nav-btn span::before {
+  content: "";
+  height: 3px;
+  width: 30px;
+  background-color: rgba(255, 255, 255, 0.541);
+  position: absolute;
+}
+.movies-page_wrapper .movies-list_wrapper .movies-page_movies-list .movies-list_navigation .movies-list_nav-btn span::after {
+  content: "";
+  height: 3px;
+  width: 30px;
+  background-color: rgba(255, 255, 255, 0.541);
+  position: absolute;
+}
+.movies-page_wrapper .movies-list_wrapper .movies-page_movies-list .movies-list_navigation__left {
+  left: 0;
+}
+.movies-page_wrapper .movies-list_wrapper .movies-page_movies-list .movies-list_navigation__left span::before {
+  transform: rotate(45deg) translateY(450%);
+}
+.movies-page_wrapper .movies-list_wrapper .movies-page_movies-list .movies-list_navigation__left span::after {
+  transform: rotate(-45deg) translateY(-450%);
+}
+.movies-page_wrapper .movies-list_wrapper .movies-page_movies-list .movies-list_navigation__right {
+  right: 0;
+}
+.movies-page_wrapper .movies-list_wrapper .movies-page_movies-list .movies-list_navigation__right span::before {
+  transform: rotate(135deg) translateY(-450%);
+}
+.movies-page_wrapper .movies-list_wrapper .movies-page_movies-list .movies-list_navigation__right span::after {
+  transform: rotate(-135deg) translateY(450%);
+}
+.movies-page_wrapper .movies-list_wrapper .movies-page_movies-list .movies-list_movies-container {
+  display: flex;
+  grid-gap: 10px;
+  flex-wrap: nowrap;
+}
+.movies-page_wrapper .movies-list_wrapper .movies-page_movies-list .movies-list_movies-container .movie-item_wrapper {
+  cursor: pointer;
+}
+.movies-page_wrapper .movies-list_wrapper .movies-page_movies-list .movies-list_movies-container .movie-item_wrapper .movie-item_poster-container {
+  width: 370px;
+  height: 250px;
+  background-size: cover;
+  background-position: 0 18%;
+}
+.movies-page_wrapper .movies-list_wrapper .movies-page_movies-list .movies-list_movies-container .movie-item_wrapper .movie-item_poster-container:hover {
+  box-shadow: 2px 2px 10px rgba(255, 255, 255, 0.377);
+}
+.movies-page_wrapper .movies-list_wrapper .movies-page_movies-list .movies-list_movies-container .movie-item_wrapper .movie-item_poster-container:hover + .movie-item_title {
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.575);
+  color: #ff5100;
+}
+
+/*# sourceMappingURL=movies_page.css.map */

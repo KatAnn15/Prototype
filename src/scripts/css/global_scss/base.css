@@ -1,12 +1,18 @@
 body {
-  background-color: #625f5f;
+  background-color: #272727;
   text-align: center;
   margin: 0 auto;
   padding: 0 auto;
+  font-family: "Netflix Sans Light";
+  color: white;
 }
 
 * {
   box-sizing: border-box;
+}
+
+button {
+  border: none;
 }
 
 /*# sourceMappingURL=base.css.map */

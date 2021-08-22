@@ -1,14 +1,18 @@
 import React from 'react';
-import Header from "./scripts/tsx/global_tsx/header_tsx/header";
-import AboveTheFold from './scripts/tsx/global_tsx/above_the_fold';
-import ListGallery from './scripts/tsx/main_tsx/list_gallery/list-gallery';
+import HomePage from './scripts/tsx/main_tsx/home_page_tsx/home';
+import MoviesPage from './scripts/tsx/main_tsx/movies_page_tsx/movies-page';
+import {HashRouter, Route, Switch} from "react-router-dom"
 
 const App: React.FC  = () => {
   return (
     <div className="App">
-      <Header/>
-      <AboveTheFold/>
-      <ListGallery/>
+      <HashRouter>
+      <Switch>
+        <Route exact path="/" component={HomePage}></Route>
+        <Route exact path="/movies/:category" component={MoviesPage}></Route>
+        <Route exact path="/movies/" component={MoviesPage}></Route>
+      </Switch>
+      </HashRouter>
     </div>
   );
 }

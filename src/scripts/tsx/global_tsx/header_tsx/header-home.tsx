@@ -9,7 +9,7 @@ type Props = {
     updateLogo: string
 }
 
-const Header: React.FC = () => {
+const HeaderHome: React.FC = () => {
     const [logo, updateLogo] = useState<Props["logo"]>("");
 
     const fetchLogo = useCallback(async () => {
@@ -24,11 +24,11 @@ const Header: React.FC = () => {
     }, [fetchLogo])
 
     return (
-        <div className="header-wrapper">
+        <div className="header-home_wrapper">
             <img className="site-logo-img" src={logo} alt="Netflix logo" />
             <MembersBar/>
         </div>
     )
 }
 
-export default Header
+export default HeaderHome

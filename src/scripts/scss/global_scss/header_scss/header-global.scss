@@ -1,0 +1,36 @@
+.header-global_wrapper {
+  max-height: 60px;
+  width: 100%;
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  .site-logo-img {
+    height: 55px;
+    padding-left: 50px;
+  }
+  .header-global_members-area {
+    width: 500px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-right: 30px;
+    span {
+      font-size: 14px;
+    }
+    .subscription-bar {
+      background-color: red;
+      padding: 5px 20px 8px 20px;
+      font-size: 16px;
+      color: white;
+      border-radius: 2px;
+    }
+    .login-bar {
+      border: 1px solid gray;
+      border-radius: 2px;
+      background-color: transparent;
+      padding: 5px 20px 8px 20px;
+      font-size: 16px;
+      color: rgb(248, 248, 248);
+    }
+  }
+}

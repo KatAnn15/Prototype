@@ -1,0 +1,46 @@
+.faq-list_wrapper {
+  background-color: black;
+  color: white;
+  margin: 10px 0;
+  padding: 30px;
+}
+.faq-list_wrapper .faq-list_content-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+.faq-list_wrapper .faq_title {
+  font-size: 3.125rem;
+  font-family: "Netflix Sans Medium";
+  margin: 0;
+  line-height: 100px;
+}
+.faq-list_wrapper .faq-items_wrapper {
+  display: grid;
+  grid-gap: 8px;
+  padding-top: 30px;
+}
+.faq-list_wrapper .faq-items_wrapper .faq-item_wrapper {
+  background-color: #242724;
+  text-align: left;
+  font-size: 22px;
+}
+.faq-list_wrapper .faq-items_wrapper .faq-item_wrapper .faq_question_wrapper {
+  display: flex;
+  border-bottom: 1px solid black;
+  cursor: pointer;
+  justify-content: space-between;
+  padding: 0 30px;
+  height: 85px;
+}
+.faq-list_wrapper .faq-items_wrapper .faq-item_wrapper .faq_question_wrapper .faq_toggle-btn {
+  background-color: transparent;
+  border: none;
+  color: gray;
+  font-size: 35px;
+}
+.faq-list_wrapper .faq-items_wrapper .faq-item_wrapper .faq_answer-wrapper {
+  justify-content: space-between;
+  padding: 0 30px;
+}
+
+/*# sourceMappingURL=faq.css.map */

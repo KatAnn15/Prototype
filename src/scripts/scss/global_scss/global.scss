@@ -1,14 +1,21 @@
 @import "./base.scss";
-@import "./header_scss/header.scss";
+@import "./header_scss/header-home.scss";
+@import "./header_scss/header-global.scss";
 
 @font-face {
   font-family: "Netflix Sans";
   src: url("/home/kateryna/Prototype/prototype/src/assets/fonts/netflix-sans-cufonfonts-webfont/NetflixSansRegular.woff");
-  font-weight: 400;
+  font-weight: 100;
 }
 
 @font-face {
   font-family: "Netflix Sans Medium";
   src: url("/home/kateryna/Prototype/prototype/src/assets/fonts/netflix-sans-cufonfonts-webfont/NetflixSansMedium.woff");
   font-weight: 800;
+}
+
+@font-face {
+  font-family: "Netflix Sans Light";
+  src: url("/home/kateryna/Prototype/prototype/src/assets/fonts/netflix-sans-cufonfonts-webfont/NetflixSansLight.woff");
+  font-weight: 100;
 }

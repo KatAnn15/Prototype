@@ -84,3 +84,92 @@
     }
   }
 }
+
+@media screen and (max-width: 481px) {
+  .list-gallery_wrapper {
+    display: grid;
+    color: white;
+    font-size: 20px;
+    grid-gap: 10px;
+    margin-top: 10px;
+    .list-gallery-item_wrapper {
+      height: 70vh;
+      background-color: rgb(0, 0, 0);
+      &:nth-child(even) .list-gallery-item_content-wrapper {
+        flex-direction: row-reverse;
+      }
+      &:nth-child(3) .list-gallery-item_media-container,
+      &:nth-child(4) .list-gallery-item_media-container {
+        margin-top: 40px;
+      }
+      .list-gallery-item_content-wrapper {
+        display: flex;
+        margin: 0 auto;
+        align-items: flex-start;
+        padding-top: 50px;
+        flex-direction: column;
+        position: relative;
+        height: 100%;
+        .list-gallery-item_info-container {
+          max-width: 100%;
+          margin: 20px;
+          text-align: center;
+          .list-gallery-item_title {
+            font-size: 30px;
+            font-family: "Netflix Sans Medium";
+            width: 90vw;
+            margin-top: 0;
+          }
+          .list-gallery-item_subtitle {
+            font-size: 17px;
+          }
+        }
+        .list-gallery-item_media-container {
+          position: absolute;
+          left: 0;
+          bottom: 30px;
+          .list-gallery-item_image {
+            position: relative;
+            z-index: 2;
+            width: 100vw;
+            overflow: hidden;
+          }
+          .video-cover_wrapper {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            .video-cover_item {
+              width: 90%;
+              height: 90%;
+              transform: translateY(20%);
+            }
+          }
+          .additional-box_wrapper {
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 3;
+            .additional-box_image {
+              height: 80px;
+            }
+            .additional-box_gif {
+              height: 60px;
+              padding-left: 20px;
+            }
+            .additional-box_info-container {
+              margin: 0 20px;
+              text-align: left;
+              .additional-box_info-container_name {
+                margin: 0;
+              }
+              .additional-box_info-container_downloading {
+                color: blue;
+                margin: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

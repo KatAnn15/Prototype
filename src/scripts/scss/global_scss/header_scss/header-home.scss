@@ -1,10 +1,11 @@
 @import "./members-bar.scss";
+
 .header-home_wrapper {
   width: 100%;
   height: 100px;
   position: absolute;
   top: 0;
-  z-index: 2;
+  z-index: 10;
   .site-logo-img {
     position: absolute;
     top: 0;
@@ -12,5 +13,34 @@
     max-width: 200px;
     height: 100%;
     transform: scale(1.125);
+  }
+}
+
+@media screen and (max-width: 1201px) {
+  .header-home_wrapper {
+    .site-logo-img {
+      max-width: 130px;
+      max-height: 100px;
+    }
+  }
+}
+
+@media screen and (max-width: 481px) {
+  .header-home_wrapper {
+    position: absolute;
+    .site-logo-img {
+      left: 15px;
+      max-width: 110px;
+      max-height: 75px;
+    }
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .header-home_wrapper {
+    .site-logo-img {
+      max-width: 80px;
+      height: 100%;
+    }
   }
 }

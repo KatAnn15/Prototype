@@ -6,6 +6,7 @@
   display: flex;
   justify-content: right;
   align-items: center;
+  position: relative;
 }
 .members-bar_wrapper .members-bar_login-button {
   width: 100px;
@@ -17,10 +18,92 @@
   font-family: "Netflix Sans";
   font-size: 17px;
   padding-bottom: 4px;
+  margin: auto;
+  position: absolute;
+  right: 55px;
 }
 .members-bar_wrapper .members-bar_login-button:hover {
   box-shadow: 1px 1px 5px rgba(255, 255, 255, 0.26), -1px -1px 5px rgba(255, 255, 255, 0.233);
   cursor: pointer;
+}
+.members-bar_wrapper .member_welcome-message {
+  position: absolute;
+  right: 180px;
+  padding: 9px 15px;
+  border: 1px solid rgba(128, 128, 128, 0.336);
+  border-radius: 2px;
+  background-color: transparent;
+  color: white;
+}
+
+@media screen and (max-width: 1201px) {
+  .header-home_wrapper .site-logo-img {
+    max-width: 130px;
+    max-height: 100px;
+  }
+}
+@media screen and (max-width: 481px) {
+  .members-bar_wrapper {
+    padding: 20px 10px;
+    display: flex;
+    flex-direction: column;
+    height: 150px;
+    max-width: 350px;
+    position: absolute;
+    right: 25px;
+    top: 0;
+    transform: none;
+  }
+  .members-bar_wrapper .members-bar_login-button {
+    width: 120px;
+    height: 40px;
+    margin: auto;
+    position: relative;
+    transform: translate(70%);
+  }
+  .members-bar_wrapper .members-bar_login-button:hover {
+    box-shadow: 1px 1px 5px rgba(255, 255, 255, 0.26), -1px -1px 5px rgba(255, 255, 255, 0.233);
+    cursor: pointer;
+  }
+  .members-bar_wrapper .member_welcome-message {
+    position: relative;
+    right: 0;
+    width: 100%;
+    border: none;
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 481px) {
+  .members-bar_wrapper {
+    padding: 20px 10px;
+    display: flex;
+    flex-direction: column;
+    height: 150px;
+    max-width: 350px;
+    position: absolute;
+    right: 10px;
+    top: 0;
+    transform: none;
+  }
+  .members-bar_wrapper .members-bar_login-button {
+    width: 120px;
+    height: 40px;
+    position: absolute;
+    right: 25px;
+    top: 75px;
+    transform: none;
+  }
+  .members-bar_wrapper .members-bar_login-button:focus {
+    box-shadow: 1px 1px 5px rgba(255, 255, 255, 0.26), -1px -1px 5px rgba(255, 255, 255, 0.233);
+    cursor: pointer;
+  }
+  .members-bar_wrapper .member_welcome-message {
+    position: absolute;
+    right: 10px;
+    width: 250px;
+    font-size: 20px;
+    text-align: right;
+  }
 }
 
 /*# sourceMappingURL=members-bar.css.map */

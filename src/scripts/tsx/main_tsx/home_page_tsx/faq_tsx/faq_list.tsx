@@ -18,7 +18,7 @@ const FAQList: React.FC = () => {
             snaps.forEach(snap => {
                 const snapData = snap.data();
                 const {question, answer, sort} = snapData;
-                items.push({item: <FAQItem question={question} answer={answer}/>, num: sort})
+                items.push({item: <FAQItem question={question} answer={answer} key={sort}/>, num: sort})
             })
             items = items.sort( (a, b) => (a.num - b.num));
             const mapped = items.map(item => item.item)

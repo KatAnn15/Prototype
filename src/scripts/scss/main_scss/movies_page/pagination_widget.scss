@@ -1,0 +1,19 @@
+.pagination-widget_wrapper {
+  width: 400px;
+  display: flex;
+  justify-content: space-around;
+  padding: 50px 0;
+  margin: 0 auto;
+  .pagination-item_wrapper {
+    width: 50px;
+    height: 40px;
+    .pagination-item_btn {
+      width: 100%;
+      height: 100%;
+      font-size: 14px;
+      cursor: pointer;
+      border: 1px solid;
+      border-radius: 5%;
+    }
+  }
+}

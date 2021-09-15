@@ -45,3 +45,47 @@
     }
   }
 }
+
+@media screen and (max-width: 481px) {
+  .faq-list_wrapper {
+    padding: 20px;
+    padding-top: 50px;
+    .faq-list_content-container {
+      max-width: 100vw;
+    }
+    .faq_title {
+      font-size: 35px;
+      font-family: "Netflix Sans Medium";
+      margin: 0;
+      line-height: 50px;
+    }
+    .faq-items_wrapper {
+      display: grid;
+      grid-gap: 8px;
+      padding-top: 30px;
+      .faq-item_wrapper {
+        background-color: rgb(36, 39, 36);
+        text-align: left;
+        font-size: 18px;
+        .faq_question_wrapper {
+          display: flex;
+          border-bottom: 1px solid black;
+          cursor: pointer;
+          @include textFormat;
+          height: 80px;
+          align-items: center;
+          .faq_toggle-btn {
+            background-color: transparent;
+            border: none;
+            color: gray;
+            font-size: 35px;
+          }
+        }
+        .faq_answer-wrapper {
+          padding: 15px;
+          font-family: "Netflix Sans Light";
+        }
+      }
+    }
+  }
+}

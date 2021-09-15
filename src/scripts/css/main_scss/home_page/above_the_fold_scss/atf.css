@@ -1,12 +1,13 @@
 .above-the-fold-wrapper {
   width: 100%;
-  height: 780px;
+  height: 95vh;
   position: relative;
   overflow: hidden;
 }
 .above-the-fold-wrapper .above-the-fold_cover-image {
   width: 100%;
-  transform: rotate(10deg) translateY(-15%) scale(1.1);
+  height: 100%;
+  transform: rotate(10deg) scale(1.2);
 }
 .above-the-fold-wrapper .above-the-fold_info-wrapper {
   position: absolute;
@@ -14,10 +15,12 @@
   height: 100%;
   top: 0;
   box-shadow: rgba(0, 0, 0, 0.698) 0 30vh 100px inset, rgba(0, 0, 0, 0.575) 0 70vh 100px inset, rgba(0, 0, 0, 0.698) 0 -30vh 100px inset;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .above-the-fold-wrapper .above-the-fold_info-wrapper .above-the-fold_info-container {
   height: 55%;
-  transform: translateY(60%);
   color: white;
   font-weight: 400;
   max-width: 800px;
@@ -35,6 +38,76 @@
 .above-the-fold-wrapper .above-the-fold_info-wrapper .above-the-fold_info-container .above-the-fold_action-note {
   font-size: 1.2rem;
   line-height: 50px;
+}
+.above-the-fold-wrapper .above-the-fold_info-wrapper .above-the-fold_info-container .above-the-fold_action-button {
+  padding: 13px 25px;
+  margin-top: 30px;
+  border-radius: 3px;
+  background-color: #902222;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+.above-the-fold-wrapper .above-the-fold_info-wrapper .above-the-fold_info-container .above-the-fold_action-button:hover {
+  border: 1px ridge rgba(250, 71, 71, 0.664);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.356);
+}
+.above-the-fold-wrapper .above-the-fold_info-wrapper .above-the-fold_info-container .above-the-fold_join-btn {
+  padding: 13px 25px;
+  border-radius: 3px;
+  color: white;
+  background-color: #8b0b0b;
+  cursor: pointer;
+  font-size: 16px;
+}
+.above-the-fold-wrapper .above-the-fold_info-wrapper .above-the-fold_info-container .above-the-fold_join-btn:hover {
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.281);
+}
+
+@media screen and (max-width: 1900px) {
+  .above-the-fold-wrapper .above-the-fold_info-wrapper .above-the-fold_info-container .above-the-fold_action-button {
+    font-size: 18px;
+    padding: 15px 27px;
+  }
+  .above-the-fold-wrapper .above-the-fold_info-wrapper .above-the-fold_info-container .above-the-fold_join-btn {
+    font-size: 18px;
+    padding: 15px 27px;
+  }
+}
+@media screen and (max-width: 481px) {
+  .above-the-fold-wrapper {
+    width: 100%;
+    height: 90vh;
+  }
+  .above-the-fold-wrapper .above-the-fold_cover-image {
+    width: auto;
+    height: 100%;
+    transform: rotate(10deg) scale(1) translateY(20%);
+  }
+  .above-the-fold-wrapper .above-the-fold_info-wrapper .above-the-fold_info-container .above-the-fold_title {
+    font-size: 50px;
+  }
+  .above-the-fold-wrapper .above-the-fold_info-wrapper .above-the-fold_info-container .above-the-fold_subtitle {
+    font-size: 29px;
+    margin: 10px auto;
+  }
+  .above-the-fold-wrapper .above-the-fold_info-wrapper .above-the-fold_info-container .above-the-fold_action-note {
+    display: none;
+  }
+  .above-the-fold-wrapper .above-the-fold_info-wrapper .above-the-fold_info-container .above-the-fold_action-button {
+    padding: 0;
+    width: 170px;
+    height: 50px;
+    font-size: 20px;
+    margin-top: 50px;
+  }
+  .above-the-fold-wrapper .above-the-fold_info-wrapper .above-the-fold_info-container .above-the-fold_join-btn {
+    padding: 0;
+    width: 170px;
+    height: 50px;
+    font-size: 20px;
+    margin-top: 50px;
+  }
 }
 
 /*# sourceMappingURL=atf.css.map */

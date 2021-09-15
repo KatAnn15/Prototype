@@ -14,10 +14,10 @@ const ListGallery: React.FC = () => {
         const files = await ref.collection("HomeListGallery");
         const allFiles: JSX.Element[] = [];
         files.onSnapshot(snaps => {
-            snaps.forEach(snap => {
+            snaps.forEach((snap) => {
                 const snapData = snap.data();
                 const {title, subtitle, mediaURL, mediaAlt, additionalBox, videoCover, downloadGif, imageURL, name} = snapData;
-                allFiles.push(<ListGalleryItem title={title} subtitle={subtitle} mediaURL={mediaURL} mediaAlt={mediaAlt} additionalBox={additionalBox} videoCover={videoCover} downloadGif={downloadGif} imageURL={imageURL} name={name}/>)
+                allFiles.push(<ListGalleryItem title={title} subtitle={subtitle} mediaURL={mediaURL} mediaAlt={mediaAlt} additionalBox={additionalBox} videoCover={videoCover} downloadGif={downloadGif} imageURL={imageURL} name={name} key={title}/>)
             })
             setFiles(allFiles)
         })

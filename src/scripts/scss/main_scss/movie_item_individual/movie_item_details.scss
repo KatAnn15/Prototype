@@ -1,0 +1,135 @@
+.movie_item_individual_wrapper {
+  width: 90vw;
+  margin-left: 120px;
+  .movie-item-details_wrapper {
+    margin-top: 5px;
+    background-color: rgba(128, 128, 128, 0.123);
+    position: relative;
+    padding-bottom: 50px;
+    .movie-item {
+      &_poster {
+        width: 100%;
+        height: 800px;
+        background-size: cover;
+        background-position: 20% 25%;
+      }
+      &_main-data {
+        position: absolute;
+        top: 0;
+        width: 50%;
+        height: 800px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 200px 0 50px;
+        background: linear-gradient(
+          0.25turn,
+          #272727,
+          #272727f1,
+          #272727ce,
+          #ffffff00
+        );
+      }
+      &_block {
+        .movie-item_sub-block {
+          text-align: left;
+          font-size: 14px;
+        }
+      }
+      &_info {
+        &_title {
+          font-size: 40px;
+          line-height: 55px;
+          padding: 5px 15px;
+          border-radius: 5px;
+          border: 5px ridge rgb(243, 96, 96);
+          width: fit-content;
+          margin: 0;
+          font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+            sans-serif;
+          background-color: red;
+          text-shadow: 2px 2px 2px rgb(117, 83, 83);
+        }
+        &_release-date {
+          background-color: rgba(128, 128, 128, 0.349);
+          width: fit-content;
+          padding: 0 7px;
+          border: 2px double rgba(128, 128, 128, 0.493);
+        }
+        &_overview {
+          margin-top: 50px;
+          line-height: 25px;
+          max-width: 90%;
+        }
+      }
+      &_tagline-wrapper {
+        .movie-item_info_tagline {
+          border-top: 1px solid gray;
+          border-bottom: 1px solid gray;
+          padding: 20px;
+          color: gray;
+        }
+      }
+      &_additional-info {
+        padding: 20px 100px;
+        width: 85%;
+        &_details {
+          text-align: left;
+          font-size: 30px;
+        }
+        .movie-item_stats {
+          display: flex;
+          justify-content: space-between;
+          color: rgb(197, 197, 197);
+          width: 90%;
+          span {
+            color: gray;
+          }
+        }
+      }
+    }
+    .join-now-banner {
+      width: 92%;
+      display: flex;
+      justify-content: space-between;
+      padding: 5px 20px;
+      background: linear-gradient(
+        0.25turn,
+        rgb(71, 71, 71),
+        rgb(37, 37, 37),
+        rgb(32, 32, 32)
+      );
+      transform: translateY(-100%);
+      border-radius: 2px;
+      .join-now_text {
+        display: flex;
+        .join-now_logo {
+          width: 30px;
+          height: 50px;
+        }
+        .join-now_subtitle {
+          margin-left: 15px;
+          font-size: 16px;
+        }
+      }
+      .join-now_action-btn {
+        width: 120px;
+        height: 35px;
+        background-color: rgb(199, 9, 9);
+        color: white;
+        align-self: center;
+        border-radius: 2px;
+        cursor: pointer;
+        &:hover {
+          background-color: red;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1900px) {
+  .movie_item_individual_wrapper {
+    margin-left: 80px;
+  }
+}

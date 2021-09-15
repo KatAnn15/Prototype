@@ -43,4 +43,49 @@
   padding: 0 30px;
 }
 
+@media screen and (max-width: 481px) {
+  .faq-list_wrapper {
+    padding: 20px;
+    padding-top: 50px;
+  }
+  .faq-list_wrapper .faq-list_content-container {
+    max-width: 100vw;
+  }
+  .faq-list_wrapper .faq_title {
+    font-size: 35px;
+    font-family: "Netflix Sans Medium";
+    margin: 0;
+    line-height: 50px;
+  }
+  .faq-list_wrapper .faq-items_wrapper {
+    display: grid;
+    grid-gap: 8px;
+    padding-top: 30px;
+  }
+  .faq-list_wrapper .faq-items_wrapper .faq-item_wrapper {
+    background-color: #242724;
+    text-align: left;
+    font-size: 18px;
+  }
+  .faq-list_wrapper .faq-items_wrapper .faq-item_wrapper .faq_question_wrapper {
+    display: flex;
+    border-bottom: 1px solid black;
+    cursor: pointer;
+    justify-content: space-between;
+    padding: 0 30px;
+    height: 80px;
+    align-items: center;
+  }
+  .faq-list_wrapper .faq-items_wrapper .faq-item_wrapper .faq_question_wrapper .faq_toggle-btn {
+    background-color: transparent;
+    border: none;
+    color: gray;
+    font-size: 35px;
+  }
+  .faq-list_wrapper .faq-items_wrapper .faq-item_wrapper .faq_answer-wrapper {
+    padding: 15px;
+    font-family: "Netflix Sans Light";
+  }
+}
+
 /*# sourceMappingURL=faq.css.map */

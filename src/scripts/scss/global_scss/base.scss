@@ -5,6 +5,7 @@ body {
   padding: 0 auto;
   font-family: "Netflix Sans Light";
   color: white;
+  overflow-x: hidden;
 }
 
 * {
@@ -13,4 +14,8 @@ body {
 
 button {
   border: none;
+}
+a {
+  text-decoration: none;
+  color: white;
 }

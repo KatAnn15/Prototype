@@ -20,7 +20,7 @@ const FAQItem: React.FC<FAQItemProps> = ({question, answer}) => {
         setDisplay(display === "none" ? "block" :  "none")
     }
 
-    const answerHTML = answer.map((paragraph, i) => (<h3 className="faq_answer-body" id={`faq_answer-body__${i}`} >{paragraph}</h3>))
+    const answerHTML = answer.map((paragraph, i) => (<h3 className="faq_answer-body" id={`faq_answer-body__${i}`} key={i}>{paragraph}</h3>))
     
     return(
         <div className="faq-item_wrapper">
@@ -28,7 +28,7 @@ const FAQItem: React.FC<FAQItemProps> = ({question, answer}) => {
                 <h3 className="faq_question-body">{question}</h3>
                 {display === "none" ? 
                 <button className="faq_toggle-btn" >&#65291;</button> :
-                 <button className="faq_toggle-btn" >&#10799;</button>}
+                 <button className="faq_toggle-btn" style={{fontSize: "22px", fontWeight: 900}}>&#10761;</button>}
             </div>
             <div className="faq_answer-wrapper" style={style}>
                 {answerHTML}

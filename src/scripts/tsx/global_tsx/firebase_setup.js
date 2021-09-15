@@ -1,10 +1,11 @@
 import firebase from "firebase/app";
 import "firebase/firestore";
 import "firebase/storage";
+import "firebase/auth";
 
 const firebaseConfig = {
   apiKey: "AIzaSyDh02xdVEfBeqmH33tJb400jZILLmmHL0g",
-  authDomain: "localhost/3000",
+  authDomain: "prototype-ae9eb.firebaseapp.com",
   databaseURL:
     "https://prototype-ae9eb-default-rtdb.europe-west1.firebasedatabase.app",
   projectId: "prototype-ae9eb",
@@ -14,4 +15,7 @@ const firebaseConfig = {
   measurementId: "G-QQNVL34DYB",
 };
 firebase.initializeApp(firebaseConfig);
+export const auth = firebase.auth();
+export const googleAuthProvider = new firebase.auth.GoogleAuthProvider();
+export const facebookAuthProvider = new firebase.auth.FacebookAuthProvider();
 export default firebase;

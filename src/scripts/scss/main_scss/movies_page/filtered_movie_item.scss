@@ -1,0 +1,24 @@
+.filtered-movie-list_wrapper {
+  display: grid;
+  width: 90%;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 10px;
+  margin: 0 auto;
+  .filtered-movie_item_wrapper {
+    position: relative;
+    .filtered-movie_item_title {
+      position: absolute;
+      top: 60%;
+      width: 100%;
+      text-align: left;
+      background-color: rgba(0, 0, 0, 0.774);
+      padding: 5px 10px;
+    }
+    .filtered-movie_item_poster {
+      width: 100%;
+      height: 200px;
+      background-position: 25% 25%;
+      background-size: cover;
+    }
+  }
+}

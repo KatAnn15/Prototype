@@ -1,9 +1,9 @@
 .movies-page_wrapper .movies-page_title {
-  font-size: 45px;
+  font-size: 50px;
   font-family: "Netflix Sans Medium";
 }
 .movies-page_wrapper .movies-list_wrapper {
-  margin: 0 auto;
+  margin: 50px auto;
   max-width: 95%;
 }
 .movies-page_wrapper .movies-list_wrapper .movies-page_subtitle {
@@ -12,6 +12,7 @@
 .movies-page_wrapper .movies-list_wrapper .movies-page_movies-list {
   position: relative;
   overflow: hidden;
+  border-radius: 20px;
 }
 .movies-page_wrapper .movies-list_wrapper .movies-page_movies-list .movies-list_navigation {
   position: absolute;
@@ -82,6 +83,7 @@
   height: 250px;
   background-size: cover;
   background-position: 0 18%;
+  border-radius: 3px;
 }
 .movies-page_wrapper .movies-list_wrapper .movies-page_movies-list .movies-list_movies-container .movie-item_wrapper .movie-item_poster-container:hover {
   box-shadow: 2px 2px 10px rgba(255, 255, 255, 0.377);
@@ -89,6 +91,116 @@
 .movies-page_wrapper .movies-list_wrapper .movies-page_movies-list .movies-list_movies-container .movie-item_wrapper .movie-item_poster-container:hover + .movie-item_title {
   text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.575);
   color: #ff5100;
+}
+
+.filter-widget-space_wrapper {
+  position: absolute;
+  width: 100%;
+  background-color: black;
+  border-top: 1px solid gray;
+  border-bottom: 1px solid gray;
+  cursor: pointer;
+  z-index: 5;
+}
+.filter-widget-space_wrapper .filter-widget-space_title {
+  margin: 0;
+  color: rgba(128, 128, 128, 0.685);
+}
+.filter-widget-space_wrapper .filter-widget_wrapper {
+  position: fixed;
+  left: 0;
+  background-color: black;
+  height: 100vh;
+  width: 200px;
+  max-width: 400px;
+  overflow: scroll;
+}
+.filter-widget-space_wrapper .filter-widget_wrapper .filter-categories-list_wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 50px;
+}
+.filter-widget-space_wrapper .filter-widget_wrapper .filter-categories-list_wrapper .filter-category-item_wrapper {
+  width: 100%;
+  margin-bottom: 10px;
+}
+.filter-widget-space_wrapper .filter-widget_wrapper .filter-categories-list_wrapper .filter-category-item_wrapper .category-label_wrapper {
+  width: 100%;
+  height: 30px;
+  background-color: rgba(34, 33, 33, 0.445);
+  color: white;
+  border-radius: 3px;
+  font-size: 16px;
+}
+.filter-widget-space_wrapper .filter-widget_wrapper .filter-categories-list_wrapper .filter-category-item_wrapper .subcategories-list_wrapper .filter-subcategory-item_wrapper .filter-subcategory-item_button {
+  width: 80%;
+  background-color: transparent;
+  color: gray;
+  text-align: right;
+  height: 25px;
+  border-left: 1px solid rgba(128, 128, 128, 0.24);
+}
+.filter-widget-space_wrapper .filter-widget_wrapper .filter-categories-list_wrapper .filter-category-item_wrapper .subcategories-list_wrapper .filter-subcategory-item_wrapper .filter-subcategory-item_button:hover {
+  cursor: pointer;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.24);
+  color: white;
+}
+.filter-widget-space_wrapper .filter-widget_wrapper .filter-widget_close-btn {
+  background-color: black;
+  border-top: 1px solid rgba(128, 128, 128, 0.459);
+  width: 200px;
+  height: 40px;
+  color: white;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  cursor: pointer;
+}
+
+.filtered-movie-list_wrapper {
+  display: grid;
+  width: 90%;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 10px;
+  margin: 0 auto;
+}
+.filtered-movie-list_wrapper .filtered-movie_item_wrapper {
+  position: relative;
+}
+.filtered-movie-list_wrapper .filtered-movie_item_wrapper .filtered-movie_item_title {
+  position: absolute;
+  top: 60%;
+  width: 100%;
+  text-align: left;
+  background-color: rgba(0, 0, 0, 0.774);
+  padding: 5px 10px;
+}
+.filtered-movie-list_wrapper .filtered-movie_item_wrapper .filtered-movie_item_poster {
+  width: 100%;
+  height: 200px;
+  background-position: 25% 25%;
+  background-size: cover;
+}
+
+.pagination-widget_wrapper {
+  width: 400px;
+  display: flex;
+  justify-content: space-around;
+  padding: 50px 0;
+  margin: 0 auto;
+}
+.pagination-widget_wrapper .pagination-item_wrapper {
+  width: 50px;
+  height: 40px;
+}
+.pagination-widget_wrapper .pagination-item_wrapper .pagination-item_btn {
+  width: 100%;
+  height: 100%;
+  font-size: 14px;
+  cursor: pointer;
+  border: 1px solid;
+  border-radius: 5%;
 }
 
 /*# sourceMappingURL=movies_page.css.map */

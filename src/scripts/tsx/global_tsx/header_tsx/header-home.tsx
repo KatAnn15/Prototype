@@ -1,16 +1,23 @@
 import * as React from 'react';
 import firebase from "../../global_tsx/firebase_setup";
-import MembersBar from "../header_tsx/members-bar"
-
+import MembersBar from "../header_tsx/members-bar";
+import { Link } from 'react-router-dom';
 import { useState, useEffect, useCallback } from 'react';
+import LoginModal from "./login-modal";
 
-type Props = {
+interface LogoProps  {
     logo: string,
     updateLogo: string
 }
 
+interface ModalVisibleProps {
+    modalVisible: Boolean,
+    setModalVisibility: React.Dispatch<React.SetStateAction<Boolean>>
+}
+
 const HeaderHome: React.FC = () => {
-    const [logo, updateLogo] = useState<Props["logo"]>("");
+    const [logo, updateLogo] = useState<LogoProps["logo"]>("");
+    const [modalVisible, setModalVisibility] = useState<ModalVisibleProps["modalVisible"]>(false)
 
     const fetchLogo = useCallback(async () => {
         const ref = firebase.storage().ref();
@@ -25,10 +32,11 @@ const HeaderHome: React.FC = () => {
 
     return (
         <div className="header-home_wrapper">
-            <img className="site-logo-img" src={logo} alt="Netflix logo" />
-            <MembersBar/>
+            <Link to={"/"}><img className="site-logo-img" src={logo} alt="Netflix logo" /></Link>
+            <MembersBar setModalVisibility={setModalVisibility}/>
+            {modalVisible ? <LoginModal setModalVisibility={setModalVisibility}/> : null}
         </div>
     )
 }
 
-export default HeaderHome
+export default HeaderHome 

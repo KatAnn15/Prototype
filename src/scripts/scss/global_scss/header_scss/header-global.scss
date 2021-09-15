@@ -4,6 +4,8 @@
   background-color: black;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  z-index: 10;
   .site-logo-img {
     height: 55px;
     padding-left: 50px;
@@ -23,6 +25,7 @@
       font-size: 16px;
       color: white;
       border-radius: 2px;
+      cursor: pointer;
     }
     .login-bar {
       border: 1px solid gray;
@@ -31,6 +34,95 @@
       padding: 5px 20px 8px 20px;
       font-size: 16px;
       color: rgb(248, 248, 248);
+      cursor: pointer;
+    }
+  }
+}
+
+@media screen and (max-width: 1201px) {
+  .header-global_wrapper {
+    .site-logo-img {
+      transform: scale(1.4);
+    }
+    .header-global_members-area {
+      width: 550px;
+      span {
+        font-size: 15px;
+      }
+      .subscription-bar {
+        font-size: 18px;
+        padding: 7px 22px 10px 22px;
+      }
+      .login-bar {
+        font-size: 18px;
+        padding: 7px 22px 10px 22px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 769px) {
+  .header-global_wrapper {
+    .site-logo-img {
+      transform: scale(1.4);
+    }
+    .header-global_members-area {
+      width: 550px;
+      span {
+        font-size: 15px;
+      }
+      .subscription-bar {
+        font-size: 18px;
+        padding: 7px 22px 10px 22px;
+      }
+      .login-bar {
+        font-size: 18px;
+        padding: 7px 22px 10px 22px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 481px) {
+  .header-global_wrapper {
+    .site-logo-img {
+      transform: scale(1.4);
+    }
+    .header-global_members-area {
+      width: 550px;
+      span {
+        font-size: 15px;
+      }
+      .subscription-bar {
+        font-size: 18px;
+        padding: 7px 22px 10px 22px;
+      }
+      .login-bar {
+        font-size: 18px;
+        padding: 7px 22px 10px 22px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .header-global_wrapper {
+    .site-logo-img {
+      height: 40px;
+    }
+    .header-global_members-area {
+      width: 550px;
+      span {
+        font-size: 15px;
+      }
+      .subscription-bar {
+        font-size: 18px;
+        padding: 7px 22px 10px 22px;
+      }
+      .login-bar {
+        font-size: 18px;
+        padding: 7px 22px 10px 22px;
+      }
     }
   }
 }

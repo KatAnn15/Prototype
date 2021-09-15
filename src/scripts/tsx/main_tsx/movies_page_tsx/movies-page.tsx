@@ -40,6 +40,7 @@ const MoviesPage:React.FC = () => {
             const currentParams = search.replace("?", "");
             const paramsArray = currentParams.split("&").map(splitee => splitee.split("="));
             let paramsDouble: {key: string, value: (string)[]}[] = paramsArray.map(param => ({key: param[0], value: param[1].toString().split("|")}));
+            
             const allMovies: (Promise<any>|undefined)[] = paramsDouble.map(param => {
                 switch(param.key) {
                     case "categories":

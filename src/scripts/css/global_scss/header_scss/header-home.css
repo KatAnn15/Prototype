@@ -42,7 +42,7 @@
     max-height: 100px;
   }
 }
-@media screen and (max-width: 481px) {
+@media screen and (max-width: 969px) {
   .members-bar_wrapper {
     padding: 20px 10px;
     display: flex;
@@ -71,38 +71,6 @@
     width: 100%;
     border: none;
     font-size: 20px;
-  }
-}
-@media screen and (max-width: 481px) {
-  .members-bar_wrapper {
-    padding: 20px 10px;
-    display: flex;
-    flex-direction: column;
-    height: 150px;
-    max-width: 350px;
-    position: absolute;
-    right: 10px;
-    top: 0;
-    transform: none;
-  }
-  .members-bar_wrapper .members-bar_login-button {
-    width: 120px;
-    height: 40px;
-    position: absolute;
-    right: 25px;
-    top: 75px;
-    transform: none;
-  }
-  .members-bar_wrapper .members-bar_login-button:focus {
-    box-shadow: 1px 1px 5px rgba(255, 255, 255, 0.26), -1px -1px 5px rgba(255, 255, 255, 0.233);
-    cursor: pointer;
-  }
-  .members-bar_wrapper .member_welcome-message {
-    position: absolute;
-    right: 10px;
-    width: 250px;
-    font-size: 20px;
-    text-align: right;
   }
 }
 .header-home_wrapper {

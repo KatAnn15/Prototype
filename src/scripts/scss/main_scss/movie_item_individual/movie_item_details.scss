@@ -133,3 +133,100 @@
     margin-left: 80px;
   }
 }
+
+@media screen and (max-width: 980px) {
+  .movie_item_individual_wrapper {
+    width: 100vw;
+    margin: 0 auto;
+    overflow: hidden;
+    .movie-item-details_wrapper {
+      padding-bottom: 0;
+      .movie-item {
+        &_poster {
+          width: 100%;
+          height: 80vh;
+          background-position: 25% 100%;
+        }
+        &_main-data {
+          position: relative;
+          width: 100vw;
+          height: fit-content;
+          min-height: 400px;
+          height: fit-content;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          padding: 25px;
+        }
+        &_block {
+          padding: 0;
+          .movie-item_sub-block {
+            text-align: left;
+            font-size: 14px;
+            .movie-item_audience-data_adult-status {
+              padding-left: 20px;
+            }
+          }
+        }
+        &_info {
+          &_title {
+            position: relative;
+            min-height: 120px;
+            width: 100vw;
+            padding-left: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+          &_overview {
+            margin-top: 50px;
+            line-height: 25px;
+            max-width: 100%;
+            width: 100vw;
+            text-align: justify;
+            padding: 0 15px;
+            padding-bottom: 30px;
+          }
+          &_release-date {
+            margin-left: 20px;
+            width: fit-content;
+            min-width: 120px;
+          }
+        }
+        &_tagline-wrapper {
+          .movie-item_info_tagline {
+            transform: translateY(-20px);
+          }
+        }
+        &_additional-info {
+          padding: 10px;
+          width: 100%;
+          &_details {
+            text-align: left;
+            font-size: 30px;
+            margin-top: 0;
+          }
+          .movie-item_stats {
+            display: flex;
+            justify-content: space-between;
+            color: rgb(197, 197, 197);
+            width: 90%;
+            flex-wrap: wrap;
+            span {
+              color: gray;
+            }
+          }
+        }
+      }
+      .join-now-banner {
+        width: 100%;
+        position: relative;
+        transform: translateY(0);
+        border-radius: 2px;
+        .join-now_text {
+          display: flex;
+        }
+      }
+    }
+  }
+}

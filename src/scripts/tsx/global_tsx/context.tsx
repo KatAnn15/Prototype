@@ -2,11 +2,13 @@ import React, { createContext } from 'react';
 
 interface ContextProps {
     loggedIn: Boolean,
-    email: (string | null),
-    setStatus: React.Dispatch<React.SetStateAction<Boolean>>,
-    setEmail: React.Dispatch<React.SetStateAction<null | string>>,
+    email: (string | null),  
     subscribed: Boolean,
-    setSubscriptionStatus: React.Dispatch<React.SetStateAction<Boolean>>
+    name: (string|null),
+    setStatus: React.Dispatch<React.SetStateAction<Boolean>>,
+    setEmail: React.Dispatch<React.SetStateAction< string | null>>,
+    setSubscriptionStatus: React.Dispatch<React.SetStateAction<Boolean>>,
+    setName: React.Dispatch<React.SetStateAction<(string | null)>>
 }
 
 export const GlobalContext = createContext({} as ContextProps);

@@ -113,6 +113,96 @@
     margin-left: 80px;
   }
 }
+@media screen and (max-width: 980px) {
+  .movie_item_individual_wrapper {
+    width: 100vw;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  .movie_item_individual_wrapper .movie-item-details_wrapper {
+    padding-bottom: 0;
+  }
+  .movie_item_individual_wrapper .movie-item-details_wrapper .movie-item_poster {
+    width: 100%;
+    height: 80vh;
+    background-position: 25% 100%;
+  }
+  .movie_item_individual_wrapper .movie-item-details_wrapper .movie-item_main-data {
+    position: relative;
+    width: 100vw;
+    height: fit-content;
+    min-height: 400px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 25px;
+  }
+  .movie_item_individual_wrapper .movie-item-details_wrapper .movie-item_block {
+    padding: 0;
+  }
+  .movie_item_individual_wrapper .movie-item-details_wrapper .movie-item_block .movie-item_sub-block {
+    text-align: left;
+    font-size: 14px;
+  }
+  .movie_item_individual_wrapper .movie-item-details_wrapper .movie-item_block .movie-item_sub-block .movie-item_audience-data_adult-status {
+    padding-left: 20px;
+  }
+  .movie_item_individual_wrapper .movie-item-details_wrapper .movie-item_info_title {
+    position: relative;
+    min-height: 120px;
+    width: 100vw;
+    padding-left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .movie_item_individual_wrapper .movie-item-details_wrapper .movie-item_info_overview {
+    margin-top: 50px;
+    line-height: 25px;
+    max-width: 100%;
+    width: 100vw;
+    text-align: justify;
+    padding: 0 15px;
+    padding-bottom: 30px;
+  }
+  .movie_item_individual_wrapper .movie-item-details_wrapper .movie-item_info_release-date {
+    margin-left: 20px;
+    width: fit-content;
+    min-width: 120px;
+  }
+  .movie_item_individual_wrapper .movie-item-details_wrapper .movie-item_tagline-wrapper .movie-item_info_tagline {
+    transform: translateY(-20px);
+  }
+  .movie_item_individual_wrapper .movie-item-details_wrapper .movie-item_additional-info {
+    padding: 10px;
+    width: 100%;
+  }
+  .movie_item_individual_wrapper .movie-item-details_wrapper .movie-item_additional-info_details {
+    text-align: left;
+    font-size: 30px;
+    margin-top: 0;
+  }
+  .movie_item_individual_wrapper .movie-item-details_wrapper .movie-item_additional-info .movie-item_stats {
+    display: flex;
+    justify-content: space-between;
+    color: #c5c5c5;
+    width: 90%;
+    flex-wrap: wrap;
+  }
+  .movie_item_individual_wrapper .movie-item-details_wrapper .movie-item_additional-info .movie-item_stats span {
+    color: gray;
+  }
+  .movie_item_individual_wrapper .movie-item-details_wrapper .join-now-banner {
+    width: 100%;
+    position: relative;
+    transform: translateY(0);
+    border-radius: 2px;
+  }
+  .movie_item_individual_wrapper .movie-item-details_wrapper .join-now-banner .join-now_text {
+    display: flex;
+  }
+}
 .movie-item-similar_wrapper {
   padding-left: 100px;
 }
@@ -152,6 +242,40 @@
 @media screen and (max-width: 1900px) {
   .movie-item-similar_wrapper {
     padding-left: 40px;
+  }
+}
+@media screen and (max-width: 481px) {
+  .movie-item-similar_wrapper {
+    padding-left: 10px;
+    width: 100vw;
+  }
+  .movie-item-similar_wrapper .movie-item_similar_container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    justify-content: center;
+    grid-gap: 10px;
+    margin: 0 auto;
+    width: 100%;
+    padding-bottom: 50px;
+  }
+  .movie-item-similar_wrapper .movie-item_similar_container .similar-item_wrapper {
+    width: 100%;
+    height: 200px;
+    position: relative;
+  }
+  .movie-item-similar_wrapper .movie-item_similar_container .similar-item_wrapper .similar-item_poster {
+    width: 100%;
+    height: 100%;
+    background-position: 25% 10%;
+    background-size: cover;
+  }
+  .movie-item-similar_wrapper .movie-item_similar_container .similar-item_wrapper .similar-item_title {
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(29, 27, 27, 0.568);
+    width: 100%;
+    padding: 5px 0 5px 15px;
+    text-align: left;
   }
 }
 

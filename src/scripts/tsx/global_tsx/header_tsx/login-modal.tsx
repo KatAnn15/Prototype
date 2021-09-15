@@ -37,58 +37,67 @@ const LoginModal: React.FC<LoginModalProps> = ({setModalVisibility}) => {
         }
     }
 
+    const handleUserSuccess: (email: string, name: string) => void = (email: string, name: string) => {
+        console.log("handle success!", 1)
+        window.localStorage.setItem("appAuth-email", email);
+        window.localStorage.setItem("appAuth-name", name);
+        context.setEmail(email);
+        context.setStatus(true);
+        context.setName(name)
+        setErrorMessage({visible: false, code: ""});
+        setModalVisibility(false);
+        console.log("handled success!", 2)
+    }
+
     const emailPasswordAuthenticationHandler: () => void = async () => {
+        console.log("click!")
         const emailField = document.getElementById("login-form_email")!;
         const passwordField = document.getElementById("login-form_password")!;
         if (modalState === "signup") {
             try {
                 const newMember= await auth.createUserWithEmailAndPassword((emailField as HTMLInputElement).value, (passwordField as HTMLInputElement).value);
                 if (newMember.user && newMember.user.email) {
-                    handleUserSuccess(newMember.user.email)
+                        handleUserSuccess(newMember.user.email, newMember.user.email.split("@")[0])
                 }
             } catch (err) {
                 setErrorMessage({visible: true, code: "" + err})
+                console.log("error", err)
             }
         } else {
             try {
             const loggedInMember = await auth.signInWithEmailAndPassword((emailField as HTMLInputElement).value, (passwordField as HTMLInputElement).value);
-            if (loggedInMember.user && loggedInMember.user.email) {
-                handleUserSuccess(loggedInMember.user.email)
-            }
+            console.log("got an old member!", loggedInMember)
+            if (loggedInMember.user && loggedInMember.user.email) 
+                handleUserSuccess(loggedInMember.user.email, loggedInMember.user.email.split("@")[0])            
             } catch(err) {
                 setErrorMessage({visible: true, code: "" + err});
+                console.log("error", err)
             }
         }
-    }
-
-    const handleUserSuccess: (email: string) => void = (email: string) => {
-        window.localStorage.setItem("appAuth-email", email);
-        context.setEmail(email);
-        context.setStatus(true)
-        setErrorMessage({visible: false, code: ""});
-        setModalVisibility(false);
     }
 
     const handleLoginClick: (provider: string) => void = async (provider) => {
         if (provider === "google") {
             try{
                 const googleLogin = await auth.signInWithPopup(googleAuthProvider);
-                if (googleLogin.user && googleLogin.user.email) {
-                    handleUserSuccess(googleLogin.user.email)
+                if (googleLogin.user && googleLogin.user.email && googleLogin.user.displayName) {
+                    handleUserSuccess(googleLogin.user.email, googleLogin.user.displayName)
                 }
             } catch (err) {
                 console.log(err)
-                setErrorMessage({visible: false, code: "Error here: " + err});
+                setErrorMessage({visible: true, code: "Error here: " + err});
+                console.log("error", err)
             }
         } else {
             try{
-                const googleLogin = await auth.signInWithPopup(facebookAuthProvider);
-                if (googleLogin.user && googleLogin.user.email) {
-                    handleUserSuccess(googleLogin.user.email)
+                const fbLogin = await auth.signInWithPopup(facebookAuthProvider);
+                if (fbLogin.user && fbLogin.user.email && fbLogin.user.displayName) {
+                    handleUserSuccess(fbLogin.user.email, fbLogin.user.displayName)
                 }
             } catch (err) {
                 console.log(err)
-                setErrorMessage({visible: false, code: "Error here: " + err});
+                setErrorMessage({visible: true, code: "Error here: " + err});
+                console.log("error", err)
             }
         }
     }

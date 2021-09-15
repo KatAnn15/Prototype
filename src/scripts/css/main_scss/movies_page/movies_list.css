@@ -93,4 +93,50 @@
   color: #ff5100;
 }
 
+@media screen and (max-width: 481px) {
+  .movies-page_wrapper {
+    overflow: hidden;
+  }
+  .movies-page_wrapper .movies-page_title {
+    font-size: 40px;
+    padding-top: 40px;
+  }
+  .movies-page_wrapper .movies-list_wrapper {
+    margin: 50px auto;
+    max-width: 95%;
+  }
+  .movies-page_wrapper .movies-list_wrapper .movies-page_movies-list .movies-list_navigation {
+    display: none;
+  }
+  .movies-page_wrapper .movies-list_wrapper .movies-page_movies-list .movies-list_nav-btn {
+    display: none;
+  }
+  .movies-page_wrapper .movies-list_wrapper .movies-page_movies-list .movies-list_nav-btn span {
+    display: none;
+  }
+  .movies-page_wrapper .movies-list_movies-container {
+    display: flex;
+    grid-gap: 10px;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .movies-page_wrapper .movies-list_movies-container .movie-item_wrapper {
+    cursor: pointer;
+  }
+  .movies-page_wrapper .movies-list_movies-container .movie-item_wrapper .movie-item_poster-container {
+    width: 370px;
+    height: 250px;
+    background-size: cover;
+    background-position: 0 18%;
+    border-radius: 3px;
+  }
+  .movies-page_wrapper .movies-list_movies-container .movie-item_wrapper .movie-item_poster-container:hover {
+    box-shadow: 2px 2px 10px rgba(255, 255, 255, 0.377);
+  }
+  .movies-page_wrapper .movies-list_movies-container .movie-item_wrapper .movie-item_poster-container:hover + .movie-item_title {
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.575);
+    color: #ff5100;
+  }
+}
+
 /*# sourceMappingURL=movies_list.css.map */

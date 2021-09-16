@@ -40,13 +40,13 @@
   }
 }
 
-@media screen and (max-width: 481px) {
+@media screen and (max-width: 969px) {
   .movie-item-similar_wrapper {
-    padding-left: 10px;
-    width: 100vw;
+    max-width: 100vw;
+    padding: 0 10px;
     .movie-item_similar_container {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+      grid-template-columns: repeat(2, minmax(200px, 1fr));
       justify-content: center;
       grid-gap: 10px;
       margin: 0 auto;
@@ -71,6 +71,16 @@
           text-align: left;
         }
       }
+    }
+  }
+}
+@media screen and (max-width: 481px) {
+  .movie-item-similar_wrapper {
+    padding-left: 10px;
+    width: 100vw;
+    .movie-item_similar_container {
+      display: grid;
+      grid-template-columns: repeat(1, minmax(130px, 1fr));
     }
   }
 }

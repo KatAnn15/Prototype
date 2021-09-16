@@ -61,6 +61,12 @@
   }
 }
 
+@media screen and (max-width: 969px) {
+  .search-bar_input-bar {
+    max-width: 280px;
+  }
+}
+
 @media screen and (max-width: 481px) {
   .search-bar_wrapper {
     position: absolute;
@@ -68,8 +74,10 @@
     top: 60px;
     height: 40px;
     z-index: 4;
+    max-width: 100vw;
+    width: 100vw;
     .search-bar_input-bar {
-      width: 100vw;
+      max-width: 100vw;
       height: 100%;
       font-size: 18px;
       background-color: rgba(255, 255, 255, 0.692);

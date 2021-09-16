@@ -44,7 +44,7 @@
 }
 @media screen and (max-width: 969px) {
   .members-bar_wrapper {
-    padding: 20px 10px;
+    padding: 20px 20px;
     display: flex;
     flex-direction: column;
     height: 150px;
@@ -60,10 +60,6 @@
     margin: auto;
     position: relative;
     transform: translate(70%);
-  }
-  .members-bar_wrapper .members-bar_login-button:hover {
-    box-shadow: 1px 1px 5px rgba(255, 255, 255, 0.26), -1px -1px 5px rgba(255, 255, 255, 0.233);
-    cursor: pointer;
   }
   .members-bar_wrapper .member_welcome-message {
     position: relative;
@@ -95,7 +91,7 @@
     max-height: 100px;
   }
 }
-@media screen and (max-width: 481px) {
+@media screen and (max-width: 969px) {
   .header-home_wrapper {
     position: absolute;
   }

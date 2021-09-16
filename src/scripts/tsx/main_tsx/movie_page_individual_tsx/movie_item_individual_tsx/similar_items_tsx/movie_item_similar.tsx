@@ -19,7 +19,7 @@ const MovieItemSimilar:React.FC<MovieItemSimilarProps> = ({id}) => {
     const getSimilar = useCallback(async () => {
        const similarData = await fetch(`https://api.themoviedb.org/3/movie/${id}/similar${key}`).then(resp => resp.json());
        const similarItems: ({poster_path: string, original_title: string, id: number})[]  = similarData.results;
-       const similarElements = similarItems.map((item, i) => <Link to={"/movies/" + item.id}><SimilarItem data={item} key={"similar" + i}/></Link>);
+       const similarElements = similarItems.map((item, i) => <Link to={"/movies/" + item.id} key={"simLink" + i}><SimilarItem data={item} key={"similar" + i}/></Link>);
        setSimilar(similarElements)
     }, [id])
 

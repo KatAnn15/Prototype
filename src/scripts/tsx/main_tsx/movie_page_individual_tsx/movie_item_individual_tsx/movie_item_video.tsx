@@ -19,7 +19,7 @@ const MovieItemVideo: React.FC<MovieItemVideoProps> = ({id}) => {
         const videoData = await fetch(`https://api.themoviedb.org/3/movie/${id}/videos` + key).then(resp => resp.json());
         if (videoData.results) {
             const allVideos: {key: number}[] = videoData.results;
-            const videosElemets = allVideos.map((video, i) => (<iframe className="movie-item_video_container" style={{border: "none", margin: "5px"}} width={isTablet ? "370px" : "500px"} height="250px" src={`https://www.youtube.com/embed/${video.key}/`}   title="YouTube video player" key={"video" + i} ></iframe>))
+            const videosElemets = allVideos.map((video, i) => (<iframe className="movie-item_video_container" style={{border: "none", margin: "5px"}} width={isTablet ? "45%" : "500px"} height="250px" src={`https://www.youtube.com/embed/${video.key}/`}   title="YouTube video player" key={"video" + i} ></iframe>))
             setVideos(videosElemets)
         }
     }, [id]);

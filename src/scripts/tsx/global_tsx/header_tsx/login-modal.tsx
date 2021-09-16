@@ -38,7 +38,6 @@ const LoginModal: React.FC<LoginModalProps> = ({setModalVisibility}) => {
     }
 
     const handleUserSuccess: (email: string, name: string) => void = (email: string, name: string) => {
-        console.log("handle success!", 1)
         window.localStorage.setItem("appAuth-email", email);
         window.localStorage.setItem("appAuth-name", name);
         context.setEmail(email);
@@ -46,11 +45,9 @@ const LoginModal: React.FC<LoginModalProps> = ({setModalVisibility}) => {
         context.setName(name)
         setErrorMessage({visible: false, code: ""});
         setModalVisibility(false);
-        console.log("handled success!", 2)
     }
 
     const emailPasswordAuthenticationHandler: () => void = async () => {
-        console.log("click!")
         const emailField = document.getElementById("login-form_email")!;
         const passwordField = document.getElementById("login-form_password")!;
         if (modalState === "signup") {
@@ -61,17 +58,14 @@ const LoginModal: React.FC<LoginModalProps> = ({setModalVisibility}) => {
                 }
             } catch (err) {
                 setErrorMessage({visible: true, code: "" + err})
-                console.log("error", err)
             }
         } else {
             try {
             const loggedInMember = await auth.signInWithEmailAndPassword((emailField as HTMLInputElement).value, (passwordField as HTMLInputElement).value);
-            console.log("got an old member!", loggedInMember)
             if (loggedInMember.user && loggedInMember.user.email) 
                 handleUserSuccess(loggedInMember.user.email, loggedInMember.user.email.split("@")[0])            
             } catch(err) {
                 setErrorMessage({visible: true, code: "" + err});
-                console.log("error", err)
             }
         }
     }
@@ -84,9 +78,7 @@ const LoginModal: React.FC<LoginModalProps> = ({setModalVisibility}) => {
                     handleUserSuccess(googleLogin.user.email, googleLogin.user.displayName)
                 }
             } catch (err) {
-                console.log(err)
                 setErrorMessage({visible: true, code: "Error here: " + err});
-                console.log("error", err)
             }
         } else {
             try{
@@ -95,9 +87,7 @@ const LoginModal: React.FC<LoginModalProps> = ({setModalVisibility}) => {
                     handleUserSuccess(fbLogin.user.email, fbLogin.user.displayName)
                 }
             } catch (err) {
-                console.log(err)
                 setErrorMessage({visible: true, code: "Error here: " + err});
-                console.log("error", err)
             }
         }
     }

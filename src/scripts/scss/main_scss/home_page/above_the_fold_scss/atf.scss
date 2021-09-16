@@ -82,6 +82,17 @@
     }
   }
 }
+@media screen and(max-width: 969px) {
+  .above-the-fold-wrapper {
+    width: 100%;
+    height: 90vh;
+    .above-the-fold_cover-image {
+      width: auto;
+      height: 100%;
+      transform: rotate(10deg) scale(1.2) translateY(10%);
+    }
+  }
+}
 
 @media screen and (max-width: 481px) {
   .above-the-fold-wrapper {

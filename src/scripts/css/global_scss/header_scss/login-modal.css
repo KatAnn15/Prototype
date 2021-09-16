@@ -22,6 +22,7 @@
 .login-modal_wrapper .login-modal_container .login-modal_title {
   cursor: pointer;
   width: 110%;
+  text-align: center;
 }
 .login-modal_wrapper .login-modal_container .login-modal_title:hover {
   color: #cbf0cb;
